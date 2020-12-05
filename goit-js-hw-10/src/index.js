@@ -28,14 +28,14 @@ function choiceTheme(e) {
 }
 
 function darkTheme() {
-  document.body.classList.remove(Theme.LIGHT);
   document.body.classList.add(Theme.DARK);
+  document.body.classList.remove(Theme.LIGHT);
   localStorage.setItem(LOCAL_THEME_KEY, Theme.DARK);
 }
 
 function lightTheme() {
-  document.body.classList.remove(Theme.DARK);
   document.body.classList.add(Theme.LIGHT);
+  document.body.classList.remove(Theme.DARK);
   localStorage.setItem(LOCAL_THEME_KEY, Theme.LIGHT);
 }
 
