@@ -41,17 +41,17 @@ class menuCards {
 
   darkTheme() {
     this.changeTheme(Theme.LIGHT, Theme.DARK);
-    localStorage.setItem(LOCAL_THEME_KEY, Theme.DARK);
   }
 
   lightTheme() {
     this.changeTheme(Theme.DARK, Theme.LIGHT);
-    localStorage.setItem(LOCAL_THEME_KEY, Theme.LIGHT);
   }
 
   changeTheme(oldTheme, newTheme) {
     document.body.classList.remove(oldTheme);
     document.body.classList.add(newTheme);
+
+    localStorage.setItem(LOCAL_THEME_KEY, newTheme);
   }
 
   readStorageTheme() {
